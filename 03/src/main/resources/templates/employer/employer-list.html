@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Danh sách nhà tuyển dụng</h1>
+    <ul th:each="employer : ${employers}">
+        <li th:text="${employer.name}"></li>
+    </ul>
+</body>
+</html>
