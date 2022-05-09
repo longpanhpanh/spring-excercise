@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .error {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-<form action="/employers" method="post">
-    <input  placeholder="Nhập tên Nhà Tuyển Dụng" id="">
+<form action="#" th:action="@{/employers}" method="post" th:object="${employerRequest}">
+    <input  placeholder="Nhập tên Nhà Tuyển Dụng" th:field="*{name}">
+    <span th:if="${#fields.hasErrors('name')}" th:errorclass="error" th:errors="*{name}"></span>
     <button type="submit">Submit</button>
 </form>
 </body>

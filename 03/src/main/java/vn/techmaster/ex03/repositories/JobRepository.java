@@ -12,7 +12,7 @@ import java.util.Map;
 @Repository
 public class JobRepository implements CrudRepository<Job> {
 
-    private Map<Long, Job> repository;
+    private Map<String, Job> repository;
 
     public JobRepository() {
         this.repository = new HashMap<>();
@@ -24,7 +24,7 @@ public class JobRepository implements CrudRepository<Job> {
     }
 
     @Override
-    public Job findById(Long id) {
+    public Job findById(String id) {
         return repository.get(id);
     }
 

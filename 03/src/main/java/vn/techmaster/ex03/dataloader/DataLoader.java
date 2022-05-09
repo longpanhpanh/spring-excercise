@@ -19,10 +19,10 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Employer emp1 = Employer.builder().id(1L).name("Fake Company 1").build();
+        Employer emp1 = Employer.builder().id("E1").name("Fake Company 1").build();
         employerRepository.save(emp1);
 
-        Employer emp2 = Employer.builder().id(2L).name("Fake Company 2").build();
+        Employer emp2 = Employer.builder().id("E2").name("Fake Company 2").build();
         employerRepository.save(emp2);
     }
 }

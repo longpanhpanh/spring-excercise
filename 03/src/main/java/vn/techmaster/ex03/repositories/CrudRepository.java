@@ -8,7 +8,7 @@ public interface CrudRepository<T> {
      void save (T t);
 
      // Find by Id
-    T findById(Long id);
+    T findById(String id);
 
     // Get all
     List<T> getList();

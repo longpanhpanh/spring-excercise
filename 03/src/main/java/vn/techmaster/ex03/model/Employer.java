@@ -6,11 +6,11 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 public class Employer {
-    private Long id;
+    private String id;
     private String name;
 
     @Builder
-    public Employer(Long id, String name) {
+    public Employer(String id, String name) {
         this.id = id;
         this.name = name;
     }

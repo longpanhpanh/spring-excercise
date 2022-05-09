@@ -9,11 +9,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Job {
-    private Long id;
+    private String id;
     private String title;
 
     @Builder
-    public Job(Long id, String title) {
+    public Job(String id, String title) {
         this.id = id;
         this.title = title;
     }

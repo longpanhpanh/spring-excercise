@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Repository
 public class EmployerRepository implements CrudRepository<Employer> {
 
-    private Map<Long, Employer> repository;
+    private Map<String , Employer> repository;
 
     public EmployerRepository() {
         this.repository = new HashMap<>();
@@ -24,7 +24,7 @@ public class EmployerRepository implements CrudRepository<Employer> {
     }
 
     @Override
-    public Employer findById(Long id) {
+    public Employer findById(String id) {
         return repository.get(id);
     }
 
